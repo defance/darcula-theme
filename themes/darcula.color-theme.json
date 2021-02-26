@@ -97,6 +97,7 @@
                 "keyword.other.package.java",
                 "keyword.other.special-method.dockerfile",
                 "keyword.other.sql",
+                "keyword.other.rust",
                 "meta.link.reference.markdown",
                 "punctuation.definition.bold.markdown",
                 "punctuation.definition.constant.markdown",
@@ -109,6 +110,8 @@
                 "punctuation.terminator.rule.css",
                 "punctuation.terminator.statement.js",
                 "punctuation.terminator.statement.ts",
+                "punctuation.comma.rust",
+                "punctuation.semi.rust",
                 "storage.modifier.access-control.groovy",
                 "storage.modifier.async.js",
                 "storage.modifier.async.ts",
@@ -136,7 +139,10 @@
                 "support.type.primitive.ts",
                 "variable.language.this.java",
                 "variable.language.this.js",
-                "variable.language.this.ts"
+                "variable.language.this.ts",
+                "entity.name.type.numeric.rust",
+                "entity.other.attribute-name.table.toml",
+                "keyword.key.toml"
             ],
             "settings": {
                 "foreground": "#cc7832"
@@ -170,7 +176,8 @@
                 "variable.other.object.property.java",
                 "variable.other.property.java",
                 "variable.other.property.js",
-                "variable.other.property.ts"
+                "variable.other.property.ts",
+                "constant.other.caps.rust"
             ],
             "settings": {
                 "foreground": "#9876aa"
@@ -209,6 +216,7 @@
                 "constant.numeric.decimal.java",
                 "constant.numeric.decimal.js",
                 "constant.numeric.decimal.ts",
+                "constant.numeric.decimal.rust",
                 "constant.numeric.groovy",
                 "constant.numeric.hex.js",
                 "constant.numeric.hex.ts",
@@ -219,7 +227,9 @@
                 "string.regexp.js punctuation.definition.string.begin.js",
                 "string.regexp.ts punctuation.definition.string.begin.ts",
                 "string.regexp.js punctuation.definition.string.end.js",
-                "string.regexp.ts punctuation.definition.string.end.ts"
+                "string.regexp.ts punctuation.definition.string.end.ts",
+                "constant.numeric.integer.toml",
+                "constant.numeric.float.toml"
             ],
             "settings": {
                 "foreground": "#6897bb"
@@ -235,11 +245,14 @@
                 "comment.block.json.comments",
                 "comment.block.ts",
                 "comment.block.xml",
+                "comment.block.rust",
                 "comment.line.double-slash.groovy",
                 "comment.line.double-slash.java",
                 "comment.line.double-slash.js",
                 "comment.line.double-slash.ts",
+                "comment.line.double-slash.rust",
                 "comment.line.number-sign.dockerfile",
+                "comment.line.number-sign.toml",
                 "markup.fenced_code.block.markdown",
                 "markup.inline.raw.string.markdown",
                 "markup.raw.block.markdown",
@@ -283,7 +296,9 @@
             "scope": [
                 "punctuation.definition.annotation.java",
                 "storage.type.annotation.groovy",
-                "storage.type.annotation.java"
+                "storage.type.annotation.java",
+                "punctuation.definition.attribute.rust",
+                "meta.attribute.rust"
             ],
             "settings": {
                 "foreground": "#bbb529"
@@ -302,6 +317,7 @@
                 "constant.other.character-class.regexp",
                 "entity.name.function.js",
                 "entity.name.function.ts",
+                "entity.name.function.rust",
                 "entity.name.tag.localname.xml",
                 "markup.underline.link.image.markdown",
                 "markup.underline.link.markdown",
@@ -335,6 +351,7 @@
                 "string.quoted.double.ts",
                 "string.quoted.double.xml",
                 "string.quoted.double.yaml",
+                "string.quoted.double.rust",
                 "string.quoted.single.css",
                 "string.quoted.single.dockerfile",
                 "string.quoted.single.groovy",
@@ -345,6 +362,8 @@
                 "string.quoted.single.ts",
                 "string.quoted.single.xml",
                 "string.quoted.single.yaml",
+                "string.quoted.single.char.rust",
+                "string.quoted.single.basic.line.toml",
                 "string.regexp.js",
                 "string.regexp.ts",
                 "string.template.js",
@@ -415,10 +434,27 @@
             "settings": {
                 "fontStyle": "bold"
             }
+        },
+        {
+            "scope": [
+                "entity.name.function.macro.rust"
+            ],
+            "settings": {
+                "foreground": "#55a3d1"
+            }
         }
     ],
     "semanticTokenColors": {
         "variable:java": {
+            "foreground": "#9876aa"
+        },
+        "property:rust": {
+            "foreground": "#9876aa"
+        },
+        "typeParameter:rust": {
+            "foreground": "#199187"       
+        },
+        "enumMember:rust": {
             "foreground": "#9876aa"
         }
     }
